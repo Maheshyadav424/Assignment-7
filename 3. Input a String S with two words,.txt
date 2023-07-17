@@ -1,0 +1,23 @@
+3. Input a String S with two words, and replace first word with second word
+and display the result -
+Input: “Hii Boy” Output: “Boy Hii”
+
+
+
+ANS:
+
+function replaceFirstWord(s)
+ {
+  const words = s.split(' ');
+  
+  if (words.length >= 2) 
+{
+    words[0] = words[1];
+  }
+  
+  return words.join(' ');
+}
+
+const inputString = prompt("Enter a string: ");
+const result = replaceFirstWord(inputString);
+console.log("Output:", result);

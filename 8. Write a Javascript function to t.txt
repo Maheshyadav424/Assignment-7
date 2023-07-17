@@ -1,0 +1,25 @@
+8. Write a Javascript function to test whether the first character of a string
+is lowercase.
+
+
+ANS:
+
+function isFirstCharacterLowercase(str) {
+  const firstChar = str.charAt(0);
+  return firstChar === firstChar.toLowerCase();
+}
+
+// Example usage:
+console.log(isFirstCharacterLowercase("hello"));
+
+   // Output: true
+
+
+console.log(isFirstCharacterLowercase("World"));  
+
+ // Output: false
+
+
+console.log(isFirstCharacterLowercase("123abc")); 
+
+ // Output: false

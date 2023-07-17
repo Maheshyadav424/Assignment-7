@@ -1,0 +1,70 @@
+10. Given a String S, achieve following tasks
+a) Convert the String into upper case.
+b) Convert only the first character to uppercase.
+
+c) Convert the String into lower case.
+d) Break the string into two halves and swap them.
+e) Count the repeating characters.
+f) Reverse the string
+
+
+
+ANS:
+
+function convertToUpperCase(s) {
+  return s.toUpperCase();
+}
+
+function convertFirstCharToUpperCase(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function convertToLowerCase(s) {
+  return s.toLowerCase();
+}
+
+function swapStringHalves(s) {
+  const midpoint = Math.floor(s.length / 2);
+  const firstHalf = s.slice(0, midpoint);
+  const secondHalf = s.slice(midpoint);
+  return secondHalf + firstHalf;
+}
+
+function countRepeatingCharacters(s) {
+  const charMap = new Map();
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (charMap.has(char)) {
+      charMap.set(char, charMap.get(char) + 1);
+    } else {
+      charMap.set(char, 1);
+    }
+  }
+  return charMap;
+}
+
+function reverseString(s) {
+  return s.split("").reverse().join("");
+}
+
+
+Example:
+const string = "Hello World";
+
+console.log(convertToUpperCase(string));              
+ // Output: "HELLO WORLD"
+
+console.log(convertFirstCharToUpperCase(string));     
+ // Output: "Hello World"
+
+console.log(convertToLowerCase(string));              
+ // Output: "hello world"
+
+console.log(swapStringHalves(string));           
+      // Output: "World Hello"
+
+console.log(countRepeatingCharacters(string));    
+     // Output: Map { 'H' => 1, 'e' => 1, 'l' => 3, 'o' => 2, ' ' => 1, 'W' => 1, 'r' => 1, 'd' => 1 }
+
+console.log(reverseString(string));         
+           // Output: "dlroW olleH"

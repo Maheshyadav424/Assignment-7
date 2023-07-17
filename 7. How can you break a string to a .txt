@@ -1,0 +1,11 @@
+7. How can you break a string to a newline in Javascript ?
+
+
+ANS:
+ (\n)
+
+EX:
+
+const str = "This is line 1.\nThis is line 2.\nThis is line 3.";
+
+console.log(str);

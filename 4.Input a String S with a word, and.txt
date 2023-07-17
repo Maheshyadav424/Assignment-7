@@ -1,0 +1,15 @@
+4.Input a String S with a word, and replace character “a” with “x” and
+display the result -
+Input: “apple” Output: “xpple”
+
+
+ANS:
+
+function replaceCharacter(s)
+ {
+  return s.replace(/a/g, 'x');
+}
+
+const inputString = prompt("Enter a string: ");
+const result = replaceCharacter(inputString);
+console.log("Output:", result);

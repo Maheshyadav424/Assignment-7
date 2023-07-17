@@ -1,0 +1,23 @@
+1. Input a String S, and check its length and if the length is greater than 4,
+   truncate the input String and output the result -
+Input: Ice Output: Ice  
+Input:Icecream Output:Icec...
+
+
+
+ANS:
+
+
+function truncateString(s)
+ {
+  if (s.length > 4) 
+{
+    return s.substring(0, 4) + "(...)";
+  } else {
+    return s;
+  }
+}
+
+let inputString = prompt("Enter a string:");
+let result = truncateString(inputString);
+console.log("Output:", result);

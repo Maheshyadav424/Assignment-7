@@ -1,0 +1,29 @@
+9. Give a correct verdict to users input if he enters "yes", "YES","Yes" ,etc
+(any combination) using string methods.
+How will you handle that ?
+
+ANS:
+
+function getVerdict(userInput) {
+  const verdict = "yes";
+  const lowercaseInput = userInput.toLowerCase();
+
+  if (lowercaseInput === verdict) {
+    return "Correct verdict: Yes!";
+  } else {
+    return "Incorrect verdict: Not Yes!";
+  }
+}
+
+// Example:
+console.log(getVerdict("yes"));   
+ // Output: Correct verdict: Yes!
+
+console.log(getVerdict("YES")); 
+   // Output: Correct verdict: Yes!
+
+console.log(getVerdict("YeS"));   
+ // Output: Correct verdict: Yes!
+
+console.log(getVerdict("no"));  
+   // Output: Incorrect verdict: Not Yes!

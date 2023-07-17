@@ -1,0 +1,15 @@
+2. Input a String S with multiple words, and remove whitespaces and
+output the result -
+Input: “Hii Boy” Output: “HiiBoy”
+
+
+ANS:
+
+function removeWhitespaces(s)
+ {
+  return s.replace(/ \s / g, '');
+}
+
+const inputString = prompt("Enter a string: ");
+const result = removeWhitespaces(inputString);
+console.log("Output:", result);
